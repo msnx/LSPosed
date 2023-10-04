@@ -28,7 +28,7 @@ import androidx.annotation.Nullable;
 
 import java.util.concurrent.CopyOnWriteArraySet;
 
-import de.robv.android.msposed.ImsposedHookLoadPackage;
+import de.robv.android.msposed.msposedHookLoadPackage;
 import de.robv.android.msposed.msposedBridge.CopyOnWriteSortedSet;
 import io.github.libxposed.api.msposedModuleInterface;
 
@@ -36,7 +36,7 @@ import io.github.libxposed.api.msposedModuleInterface;
  * This class is only used for internal purposes, except for the {@link LoadPackageParam}
  * subclass.
  */
-public abstract class XC_LoadPackage extends XCallback implements ImsposedHookLoadPackage {
+public abstract class XC_LoadPackage extends XCallback implements msposedHookLoadPackage {
     /**
      * Creates a new callback with default priority.
      *

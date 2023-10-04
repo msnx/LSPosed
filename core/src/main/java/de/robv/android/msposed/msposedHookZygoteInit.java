@@ -4,14 +4,14 @@ package de.robv.android.msposed;
  * Hook the initialization of Zygote process(es), from which all the apps are forked.
  *
  * <p>Implement this interface in your module's main class in order to be notified when Android is
- * starting up. In {@link ImsposedHookZygoteInit}, you can modify objects and place hooks that should
+ * starting up. In {@link msposedHookZygoteInit}, you can modify objects and place hooks that should
  * be applied for every app. Only the Android framework/system classes are available at that point
  * in time. Use {@code null} as class loader for {@link msposedHelpers#findAndHookMethod(String, ClassLoader, String, Object...)}
  * and its variants.
  *
- * <p>If you want to hook one/multiple specific apps, use {@link ImsposedHookLoadPackage} instead.
+ * <p>If you want to hook one/multiple specific apps, use {@link msposedHookLoadPackage} instead.
  */
-public interface ImsposedHookZygoteInit extends ImsposedMod {
+public interface msposedHookZygoteInit extends msposedMod {
     /**
      * Called very early during startup of Zygote.
      * @param startupParam Details about the module itself and the started process.

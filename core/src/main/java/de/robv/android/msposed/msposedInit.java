@@ -264,29 +264,29 @@ public final class msposedInit {
 
                 Class<?> moduleClass = mcl.loadClass(moduleClassName);
 
-                if (!ImsposedMod.class.isAssignableFrom(moduleClass)) {
-                    Log.e(TAG, "    This class doesn't implement any sub-interface of ImsposedMod, skipping it");
+                if (!msposedMod.class.isAssignableFrom(moduleClass)) {
+                    Log.e(TAG, "    This class doesn't implement any sub-interface of msposedMod, skipping it");
                     continue;
                 }
 
                 final Object moduleInstance = moduleClass.newInstance();
 
-                if (moduleInstance instanceof ImsposedHookZygoteInit) {
-                    ImsposedHookZygoteInit.StartupParam param = new ImsposedHookZygoteInit.StartupParam();
+                if (moduleInstance instanceof msposedHookZygoteInit) {
+                    msposedHookZygoteInit.StartupParam param = new msposedHookZygoteInit.StartupParam();
                     param.modulePath = apk;
                     param.startsSystemServer = startsSystemServer;
-                    ((ImsposedHookZygoteInit) moduleInstance).initZygote(param);
+                    ((msposedHookZygoteInit) moduleInstance).initZygote(param);
                     count++;
                 }
 
-                if (moduleInstance instanceof ImsposedHookLoadPackage) {
-                    msposedBridge.hookLoadPackage(new ImsposedHookLoadPackage.Wrapper((ImsposedHookLoadPackage) moduleInstance));
+                if (moduleInstance instanceof msposedHookLoadPackage) {
+                    msposedBridge.hookLoadPackage(new msposedHookLoadPackage.Wrapper((msposedHookLoadPackage) moduleInstance));
                     count++;
                 }
 
-                if (moduleInstance instanceof ImsposedHookInitPackageResources) {
+                if (moduleInstance instanceof msposedHookInitPackageResources) {
                     hookResources();
-                    msposedBridge.hookInitPackageResources(new ImsposedHookInitPackageResources.Wrapper((ImsposedHookInitPackageResources) moduleInstance));
+                    msposedBridge.hookInitPackageResources(new msposedHookInitPackageResources.Wrapper((msposedHookInitPackageResources) moduleInstance));
                     count++;
                 }
             } catch (Throwable t) {

@@ -28,14 +28,14 @@ import androidx.annotation.Nullable;
 
 import java.util.concurrent.CopyOnWriteArraySet;
 
-import de.robv.android.msposed.ImsposedHookInitPackageResources;
+import de.robv.android.msposed.msposedHookInitPackageResources;
 import io.github.libxposed.api.msposedModuleInterface;
 
 /**
  * This class is only used for internal purposes, except for the {@link InitPackageResourcesParam}
  * subclass.
  */
-public abstract class XC_InitPackageResources extends XCallback implements ImsposedHookInitPackageResources {
+public abstract class XC_InitPackageResources extends XCallback implements msposedHookInitPackageResources {
     /**
      * Creates a new callback with default priority.
      *

@@ -12,7 +12,7 @@ import de.robv.android.msposed.callbacks.XC_InitPackageResources.InitPackageReso
  * <p>This interface should be implemented by the module's main class. msposed will take care of
  * registering it as a callback automatically.
  */
-public interface ImsposedHookInitPackageResources extends ImsposedMod {
+public interface msposedHookInitPackageResources extends msposedMod {
     /**
      * This method is called when resources for an app are being initialized.
      * Modules can call special methods of the {@link XResources} class in order to replace resources.
@@ -24,8 +24,8 @@ public interface ImsposedHookInitPackageResources extends ImsposedMod {
 
     /** @hide */
     final class Wrapper extends XC_InitPackageResources {
-        private final ImsposedHookInitPackageResources instance;
-        public Wrapper(ImsposedHookInitPackageResources instance) {
+        private final msposedHookInitPackageResources instance;
+        public Wrapper(msposedHookInitPackageResources instance) {
             this.instance = instance;
         }
         @Override

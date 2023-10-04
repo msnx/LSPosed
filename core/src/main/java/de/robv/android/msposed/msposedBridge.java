@@ -267,7 +267,7 @@ public final class msposedBridge {
     /**
      * Adds a callback to be executed when an app ("Android package") is loaded.
      *
-     * <p class="note">You probably don't need to call this. Simply implement {@link ImsposedHookLoadPackage}
+     * <p class="note">You probably don't need to call this. Simply implement {@link msposedHookLoadPackage}
      * in your module class and msposed will take care of registering it as a callback.
      *
      * @param callback The callback to be executed.
@@ -282,7 +282,7 @@ public final class msposedBridge {
     /**
      * Adds a callback to be executed when the resources for an app are initialized.
      *
-     * <p class="note">You probably don't need to call this. Simply implement {@link ImsposedHookInitPackageResources}
+     * <p class="note">You probably don't need to call this. Simply implement {@link msposedHookInitPackageResources}
      * in your module class and msposed will take care of registering it as a callback.
      *
      * @param callback The callback to be executed.

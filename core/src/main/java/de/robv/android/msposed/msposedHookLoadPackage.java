@@ -12,7 +12,7 @@ import de.robv.android.msposed.callbacks.XC_LoadPackage.LoadPackageParam;
  * <p>This interface should be implemented by the module's main class. msposed will take care of
  * registering it as a callback automatically.
  */
-public interface ImsposedHookLoadPackage extends ImsposedMod {
+public interface msposedHookLoadPackage extends msposedMod {
     /**
      * This method is called when an app is loaded. It's called very early, even before
      * {@link Application#onCreate} is called.
@@ -25,8 +25,8 @@ public interface ImsposedHookLoadPackage extends ImsposedMod {
 
     /** @hide */
     final class Wrapper extends XC_LoadPackage {
-        private final ImsposedHookLoadPackage instance;
-        public Wrapper(ImsposedHookLoadPackage instance) {
+        private final msposedHookLoadPackage instance;
+        public Wrapper(msposedHookLoadPackage instance) {
             this.instance = instance;
         }
         @Override

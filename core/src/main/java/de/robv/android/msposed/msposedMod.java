@@ -23,5 +23,5 @@ package de.robv.android.msposed;
 /**
  * Marker interface for msposed modules. Cannot be implemented directly.
  */
-/* package */ interface ImsposedMod {
+/* package */ interface msposedMod {
 }

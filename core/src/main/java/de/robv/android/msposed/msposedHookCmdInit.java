@@ -27,7 +27,7 @@ package de.robv.android.msposed;
  * @hide msposed no longer hooks command-line tools, therefore this interface shouldn't be
  * implemented anymore.
  */
-public interface ImsposedHookCmdInit extends ImsposedMod {
+public interface msposedHookCmdInit extends msposedMod {
     /**
      * Called very early during startup of a command-line tool.
      *
