@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with LSPosed.  If not, see <https://www.gnu.org/licenses/>.
  *
- * Copyright (C) 2020 EdXposed Contributors
+ * Copyright (C) 2020 Edmsposed Contributors
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package de.robv.android.xposed.callbacks;
+package de.robv.android.msposed.callbacks;
 
 import android.os.Bundle;
 
@@ -26,10 +26,10 @@ import org.lsposed.lspd.deopt.PrebuiltMethodsDeopter;
 
 import java.io.Serializable;
 
-import de.robv.android.xposed.XposedBridge;
+import de.robv.android.msposed.msposedBridge;
 
 /**
- * Base class for Xposed callbacks.
+ * Base class for msposed callbacks.
  * <p>
  * This class only keeps a priority for ordering multiple callbacks.
  * The actual (abstract) callback methods are added by subclasses.
@@ -40,7 +40,7 @@ abstract public class XCallback {
      *
      * <p>This is usually set to {@link #PRIORITY_DEFAULT}. However, in case a certain callback should
      * be executed earlier or later a value between {@link #PRIORITY_HIGHEST} and {@link #PRIORITY_LOWEST}
-     * can be set instead. The values are just for orientation though, Xposed doesn't enforce any
+     * can be set instead. The values are just for orientation though, msposed doesn't enforce any
      * boundaries on the priority values.
      */
     public final int priority;
@@ -61,7 +61,7 @@ abstract public class XCallback {
     }
 
     /**
-     * Base class for Xposed callback parameters.
+     * Base class for msposed callback parameters.
      */
     public static abstract class Param {
         /**
@@ -147,7 +147,7 @@ abstract public class XCallback {
             try {
                 param.callbacks[i].call(param);
             } catch (Throwable t) {
-                XposedBridge.log(t);
+                msposedBridge.log(t);
             }
         }
     }

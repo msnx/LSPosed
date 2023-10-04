@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with LSPosed.  If not, see <https://www.gnu.org/licenses/>.
  *
- * Copyright (C) 2020 EdXposed Contributors
+ * Copyright (C) 2020 Edmsposed Contributors
  * Copyright (C) 2021 - 2022 LSPosed Contributors
  */
 
@@ -127,11 +127,11 @@ namespace lspd {
         DexBuilder dex_file;
 
         ClassBuilder xresource_builder{
-                dex_file.MakeClass("xposed.dummy.XResourcesSuperClass")};
+                dex_file.MakeClass("msposed.dummy.XResourcesSuperClass")};
         xresource_builder.setSuperClass(TypeDescriptor::FromClassname(JUTFString(env, resource_super_class).get()));
 
         ClassBuilder xtypearray_builder{
-                dex_file.MakeClass("xposed.dummy.XTypedArraySuperClass")};
+                dex_file.MakeClass("msposed.dummy.XTypedArraySuperClass")};
         xtypearray_builder.setSuperClass(TypeDescriptor::FromClassname(JUTFString(env, typed_array_super_class).get()));
 
         slicer::MemView image{dex_file.CreateImage()};

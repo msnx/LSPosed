@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with LSPosed.  If not, see <https://www.gnu.org/licenses/>.
  *
- * Copyright (C) 2020 EdXposed Contributors
+ * Copyright (C) 2020 Edmsposed Contributors
  * Copyright (C) 2021 LSPosed Contributors
  */
 
@@ -34,7 +34,7 @@
 
 
 /*
- * Module: define xposed_native file in /assets, each line is a .so file name
+ * Module: define msposed_native file in /assets, each line is a .so file name
  * LSP: Hook do_dlopen, if any .so file matches the name above, try to call
  *      "native_init(void*)" function in target so with function pointer of "init" below.
  * Module: Call init function with the pointer of callback function.

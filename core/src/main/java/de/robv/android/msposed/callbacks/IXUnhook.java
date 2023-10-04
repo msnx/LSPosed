@@ -14,20 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with LSPosed.  If not, see <https://www.gnu.org/licenses/>.
  *
- * Copyright (C) 2020 EdXposed Contributors
+ * Copyright (C) 2020 Edmsposed Contributors
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package de.robv.android.xposed.callbacks;
+package de.robv.android.msposed.callbacks;
 
-import de.robv.android.xposed.IXposedHookZygoteInit;
+import de.robv.android.msposed.ImsposedHookZygoteInit;
 
 /**
  * Interface for objects that can be used to remove callbacks.
  *
  * <p class="warning">Just like hooking methods etc., unhooking applies only to the current process.
  * In other process (or when the app is removed from memory and then restarted), the hook will still
- * be active. The Zygote process (see {@link IXposedHookZygoteInit}) is an exception, the hook won't
+ * be active. The Zygote process (see {@link ImsposedHookZygoteInit}) is an exception, the hook won't
  * be inherited by any future processes forked from it in the future.
  *
  * @param <T> The class of the callback.

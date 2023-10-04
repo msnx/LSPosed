@@ -14,20 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with LSPosed.  If not, see <https://www.gnu.org/licenses/>.
  *
- * Copyright (C) 2020 EdXposed Contributors
+ * Copyright (C) 2020 Edmsposed Contributors
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package de.robv.android.xposed;
+package de.robv.android.msposed;
 
 
 /**
  * Hook the initialization of Java-based command-line tools (like pm).
  *
- * @hide Xposed no longer hooks command-line tools, therefore this interface shouldn't be
+ * @hide msposed no longer hooks command-line tools, therefore this interface shouldn't be
  * implemented anymore.
  */
-public interface IXposedHookCmdInit extends IXposedMod {
+public interface ImsposedHookCmdInit extends ImsposedMod {
     /**
      * Called very early during startup of a command-line tool.
      *

@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with LSPosed.  If not, see <https://www.gnu.org/licenses/>.
  *
- * Copyright (C) 2020 EdXposed Contributors
+ * Copyright (C) 2020 Edmsposed Contributors
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package de.robv.android.xposed;
+package de.robv.android.msposed;
 
 /**
- * Marker interface for Xposed modules. Cannot be implemented directly.
+ * Marker interface for msposed modules. Cannot be implemented directly.
  */
-/* package */ interface IXposedMod {
+/* package */ interface ImsposedMod {
 }

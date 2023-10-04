@@ -14,18 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with LSPosed.  If not, see <https://www.gnu.org/licenses/>.
  *
- * Copyright (C) 2020 EdXposed Contributors
+ * Copyright (C) 2020 Edmsposed Contributors
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package de.robv.android.xposed;
+package de.robv.android.msposed;
 
 import java.lang.reflect.Executable;
 import java.lang.reflect.Member;
 import java.util.HashMap;
 
-import de.robv.android.xposed.callbacks.IXUnhook;
-import de.robv.android.xposed.callbacks.XCallback;
+import de.robv.android.msposed.callbacks.IXUnhook;
+import de.robv.android.msposed.callbacks.XCallback;
 
 /**
  * Callback class for method hooks.
@@ -203,7 +203,7 @@ public abstract class XC_MethodHook extends XCallback {
         @SuppressWarnings("deprecation")
         @Override
         public void unhook() {
-            XposedBridge.unhookMethod(hookMethod, XC_MethodHook.this);
+            msposedBridge.unhookMethod(hookMethod, XC_MethodHook.this);
         }
 
     }
