@@ -44,7 +44,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 import de.robv.android.msposed.callbacks.XC_InitPackageResources;
 import de.robv.android.msposed.callbacks.XC_LoadPackage;
-import io.github.libxposed.api.msposedInterface;
+import io.github.libxposed.api.XposedInterface;
 
 /**
  * This class contains most of msposed's central logic, such as initialization and callbacks used by
@@ -133,7 +133,7 @@ public final class msposedBridge {
      * Returns the currently installed version of the msposed framework.
      */
     public static int getmsposedVersion() {
-        return msposedInterface.API;
+        return XposedInterface.API;
     }
 
     /**
