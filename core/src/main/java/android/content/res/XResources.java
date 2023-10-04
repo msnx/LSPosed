@@ -67,8 +67,8 @@ import de.robv.android.msposed.msposedInit;
 import de.robv.android.msposed.callbacks.XC_LayoutInflated;
 import de.robv.android.msposed.callbacks.XC_LayoutInflated.LayoutInflatedParam;
 import de.robv.android.msposed.callbacks.XCallback;
-import msposed.dummy.XResourcesSuperClass;
-import msposed.dummy.XTypedArraySuperClass;
+import xposed.dummy.XResourcesSuperClass;
+import xposed.dummy.XTypedArraySuperClass;
 
 /**
  * {@link android.content.res.Resources} subclass that allows replacing individual resources.

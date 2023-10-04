@@ -30,7 +30,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 import de.robv.android.msposed.msposedHookLoadPackage;
 import de.robv.android.msposed.msposedBridge.CopyOnWriteSortedSet;
-import io.github.libxposed.api.msposedModuleInterface;
+import io.github.libxposed.api.XposedModuleInterface;
 
 /**
  * This class is only used for internal purposes, except for the {@link LoadPackageParam}
